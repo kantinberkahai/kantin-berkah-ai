@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kantin Digital Sekolah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .menu-item {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-item h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .menu-item p {
+      color: #666;
+      margin: 5px 0;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Kantin Digital Sekolah</h1>
+
+<div class="menu-item">
+  <h2>Dimsum</h2>
+  <p>Harga: Rp 2.500</p>
+  <button onclick="pesan('Dimsum')">Pesan Sekarang</button>
+</div>
+
+<div class="menu-item">
+  <h2>Papeda Telur Puyuh</h2>
+  <p>Harga: Rp 2.000</p>
+  <button onclick="pesan('Papeda Telur Puyuh')">Pesan Sekarang</button>
+</div>
+
+<div class="menu-item">
+  <h2>Papeda Telur Ayam</h2>
+  <p>Harga: Rp 5.000</p>
+  <button onclick="pesan('Papeda Telur Ayam')">Pesan Sekarang</button>
+</div>
+
+<script>
+  function pesan(menu) {
+    const nomorWA = '6283861042607';
+    const pesanWA = `Halo, saya mau pesan: ${menu}`;
+    const link = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesanWA)}`;
+    window.open(link, '_blank');
+  }
+</script>
+
+</body>
+</html>
