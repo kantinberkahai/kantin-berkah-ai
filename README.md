@@ -1,5 +1,4 @@
 # kantin-berkah-ai 
-<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
